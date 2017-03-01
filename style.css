@@ -1,0 +1,295 @@
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	outline:none;
+}
+table {						/* устраняем отступы между ячейками таблицы */
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+} 
+input, select, button, textarea {
+	margin: 0; 				/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+	font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+	outline: none;
+}
+input[type="text"], input[type="password"], textarea {
+	padding: 0; 				/* убираем внутренние отступы для текстовых полей */
+}
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+	vertical-align: bottom;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+nav ul {
+	 list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html {
+	min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+body {
+	color: #7e7f84; /*назначили глобальный цвет всему макету*/
+	text-align: left;
+	font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+	min-height:100%;
+	font-family: 'Roboto', sans-serif; /*подключили шрифт на весь боди*/
+					/*font-family: 'Roboto Condensed', sans-serif;*/
+}
+a, a:visited { /* порядок правил для ссылок имеет значение */
+	color: #f45a40; /*глобальный цвет для ссылок*/
+	text-decoration: underline;
+}
+a:hover {
+	color: #f45a40; /*глобальный цвет для ссылок*/
+	text-decoration:none;
+}
+a:focus, a:active {
+	color: #f45a40; /*глобальный цвет для ссылок*/
+	text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+}
+img{
+
+	max-width:100%;
+}
+.clr{
+	clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+/* --------------- /базовые настройки ---------*/
+
+.center-block-main{ max-width:1170px; margin:0 auto;}
+
+.logo {float:left; font-size:1.375em; font-family: 'Roboto Condensed', sans-serif; }
+
+.header-top{ padding:30px 0; border-bottom:1px solid #30D507;}
+
+.contact-backet{ float:right;}
+	.contact-backet p{ font-size:0.75em; float:left; font-weight:600;}
+	.contact-backet p img{ vertical-align:middle; margin-left:3px;}
+
+.header-tel{ margin-top:8px;}
+	.header-backet{ border:1px solid gray; padding:7px 25px; margin-left:20px;}
+		.header-backet a{ text-decoration:none; color:black; text-transform:uppercase; margin-left:20px;}
+			.header-backet a:hover{ color:green; text-decoration: underline;}
+
+.header-bottom{ margin-top:10px;}
+	
+	.menu{ float:left;}
+		.menu li{ float:left; text-transform:uppercase; margin-right:30px; font-size:0.875em;}
+			.menu li a{ text-decoration:none; color:#361FFC; font-weight:bold;}
+				.menu li a:hover{ color:#ED4A33; text-decoration: underline; border:1px dotted red;}
+	
+	.searhc-block{ float:left;}
+	.searhc-btn{ float:left; margin:2px 5px 0 0;}
+	.search{ float:left; font-size:0.875em; color:red; border:none;}
+	/*-------------------------------------слайдер -----------------------------------------------------------*/
+	.my-slider{}
+		.my-slider ul li{ position:relative; color:#f45a40}
+			.my-slider ul li h2{ position:absolute; top:60px; left:100px; font-size:59px; font-weight: bold; 
+			text-shadow: 0px 0px 30px gray;}
+				.my-slider ul li h3{ position:absolute; top:170px; left:200px; font-size:25px; text-align:center;}
+					.my-slider ul li p{ position:absolute; top:400px; left:60px; font-size:16px; text-shadow: 0 5px 20px white; }
+					
+	.unslider-nav{ max-width:1170px; margin:0 auto; position:relative; top:-40px;}
+/*-------------------------------------слайдер end-----------------------------------------------------------*/
+/*блок 3 колонки*/
+.block_3-main{ margin-bottom:50px;}
+	.block_3-main article{ float:left; width:31.6%; margin-left:2.6%;}
+		.block_3-main article:first-child{ margin-left:0px;} /*можно так можно по другому - обнулить отступ слева*/
+		/*.block_3-main article.mar-left-0{ margin-left:0px;}*/
+		.block_3-main article img{ display: block; margin:0 auto 20px auto;}
+		.block_3-main article h2{ font-family: 'Roboto Condensed', sans-serif; font-size:1.375em; margin-bottom:20px;}
+		.block_3-main article p{ font-size:0.875em;}
+		
+	 
+ /* блок 4 колонки*/
+/*пытался сам - получилось - вырезал в отдельный файл*/
+/* ниже иду по видео урокам*/
+
+.block4-section{ margin-bottom:60px;}
+.block4-section>h2{ text-align:center; font-family:'Roboto Condensed', sans-serif; color:#9314DC; font-size:1.375em; 
+					margin-bottom:30px;}
+.block4-main article{ width:23%; margin-left:2.6666666%; float:left;}
+.block4-main article:first-child{ margin-left:0;}
+.block4-main article img{ display:block; margin:0 auto 0px auto;}
+.block4-main-content{ padding:20px 20px 0 20px; border: 1px solid #eee;}
+.block4-main-content h2{ color:#1DF937; font-size:1.25em; text-transform:uppercase; margin-bottom:5px;}
+.block4-main-content h3{ color:#507CE3; font-size:0.875em; text-transform:uppercase; margin-bottom:10px; font-style:italic;}
+.block4-main-content p{ font-size:0.625em; margin-bottom:15px;}
+p.prise-basket{ border-top:1px solid #eee; font-size:0.875em; color:#FF952C; padding: 15px 0; margin-bottom:0; margin-top:20px;}
+.prise{ float:left;}
+.basket-btn{ float:right;}
+
+.about{ margin-bottom:60px;}
+.about-content{ float:left; width:60%; }
+.about-content h2{ font-size:1.325em; font-weight:bold; color:#08F3F7; margin-bottom:30px;}
+.about-content p{  font-size:0.875em; font-style:italic; margin-bottom:25px;}
+.map{ float:right; max-width:35%;}
+.map-in{ max-height:100%; overflow:hidden;}
+/*тут надо еще раз попробывать 15урок не совсем понял*/
+
+.subscrebe{ background-color:#F718CC; color:#fff; padding:30px 0;}
+.subscrebe h2{ float:left; font-size:1.325em; text-transform:uppercase; margin-top:5px; }
+.sub-form{ float:right;}
+.email-inpt{ text-transform:uppercase; font-size:0.875em; float:left; width:200px; padding:7px 20px; border:none; }
+.submit-btn{ text-transform:uppercase; font-size:0.875em; background-color:#7155FF; margin-left:20px; border:none; color:#fff; padding:7px 20px; cursor:pointer;}
+
+.ftr{ background-color:#58DBD5; padding:40px 0;}
+.ftr h2{ text-transform:uppercase; font-weight:bold; font-size:1.325em; color:#EC0A26; margin-bottom:15px;}
+.ftr p{ margin:5px 0; font-size:0.875em;}
+.ftr h3{ margin-bottom:10px;}
+.ftr h3 a{ text-decoration:none; color:#ED08D7; font-size:0.975em;}
+.ftr h3 a:hover{ text-decoration: underline; color:black;}
+.support{ float:left; width:45%; margin-right:5%;}
+.support a{ display:block; margin-bottom:5px; text-decoration:none; color:#FC08E4; font-size:1.2em;}
+.support a:hover{ text-decoration:underline; color:gray;}
+.ftrmail { width:100%; text-transform:uppercase; margin-bottom:20px; font-size:20px; padding:7px 20px; box-sizing:border-box; border:none;}
+.ftrtext { width:100%; text-transform:uppercase; margin-bottom:20px; font-size:20px; padding: 7px 20px; box-sizing:border-box; border:none;}
+.ftrsubmit{ text-transform:uppercase; font-size:0.875em; background-color:#f45a40; border:none; color:#fff; padding:7px 20px; cursor:pointer;}
+
+
+/*медиа запросы вестка под разное расширение*/
+
+@media screen and (max-width:900px){
+
+	.logo{ color:red; font-weight:bold;}
+	.my-slider ul li h2{top:10px; left:80px; font-size:50px; color:#000CF5;}
+	.my-slider ul li h3{ position:absolute; top:170px; left:100px; font-size:25px; text-align:center; color:#000CF5;}
+	.my-slider ul li p{ top:300px; left:60px; color:#000CF5; font-weight: bold; }
+	.block4-main article{ width:45%; margin:0 2.5% 30px 2.5%; float:left;}
+.block4-main article:first-child{ margin-left: 2.5%;}
+	.block4-main article img{ display:block; margin:0 auto 0px auto; width:100%}
+	.subscrebe h2{ text-align:center; float:none; margin-bottom:10px;}
+	.sub-form{ float:none; display: table; margin:0 auto; }
+	}		
+
+@media screen and (max-width:640px){
+	.my-slider ul li h2{font-size:30px;}
+	.my-slider ul li h3{top:100px; left:80px; font-size:15px; text-align:center; color:#000CF5;}
+	.my-slider ul li p{ top:200px; left:80px; font-size:10px;}
+	.searhc-block{ border-top:1px solid #eee; border-bottom:1px solid #eee; margin:10px 0; padding:5px 0 7px 0; float:right;}
+	}
+	
+@media screen and (max-width:480px){
+		.logo {float:none; font-size:1.375em; display:table; margin:0 auto; margin-bottom:10px;}
+		.contact-backet{float:none; text-align:center;}
+		.contact-backet p{ float:none; margin-bottom:5px}
+		.menu li{ font-size:0.675em;}
+		.my-slider ul li h2{top:20px; left:15px; font-size:30px; color:green;}
+	.my-slider ul li h3{ top:100px; left:15px; font-size:20px; color:red;}
+	.my-slider ul li p{ top:180px; left:15px; color:#F57B11; font-weight:100; }
+	.block_3-main article{ float:none; width:100%; margin-left:0px;}
+	.block_3-main article img{ width:100%; margin-bottom:5px;}
+	.block_3-main article h2{ margin-bottom:5px;}
+	.block_3-main article p{ font-size:0.875em; margin-bottom:15px;}
+		.about-content{ float:none; width:100%; margin-top:-60px; }
+	.about-content h2{margin-bottom:10px;}
+.about-content p{  margin-bottom:5px;}
+.map{ float:none; max-width:100%;}
+.map-in{ max-height:100%; overflow:hidden;}
+
+.email-inpt{ font-size:0.575em; width:100px; padding:7px 10px;}
+.submit-btn{ font-size:0.575em; padding:7px 10px;}
+.subscrebe{ padding:10px 0; margin-top:-40px;}
+.subscrebe h2{ font-size:15px;}
+.sub-form{ font-size:15px; }	
+		}
+
+@media screen and (max-width:414px){
+	.header-backet{ float:none; margin-left:0px;}
+	.menu li{ float:none;}
+		.my-slider ul li h2{top:5px; left:5px; font-size:20px; color:green;}
+		.my-slider ul li h3{ top:40px; left:5px; font-size:10px; color:red;}
+		.my-slider ul li p{ top:120px; left:5px; font-weight:0; }
+	}
+
+@media screen and (max-width:375px){
+	.header-top{ padding:10px 0;}
+	.contact-backet{ float:none;}
+	.header-backet{ margin-left:0px;}
+	.header-bottom{ margin-top:0px;}
+	.menu li{ float:none;}
+		.my-slider ul li h2{top:5px; left:5px; font-size:20px; color:green;}
+		.my-slider ul li h3{ top:40px; left:5px; font-size:10px; color:red;}
+		.my-slider ul li p{ top:80px; left:5px; color:blue; font-weight:0; }
+		.block_3-main{ margin-bottom:20px;}
+		.block_3-main article h2{ font-size:1.0em; margin-bottom:10px;}
+		.block_3-main article p{ font-size:0.675em;}
+		.block4-section>h2{ font-size:1.10em; margin-bottom:10px;}
+		.block4-main-content h2{ font-size:0.875em;}
+		.block4-main-content h3{ font-size:0.775em;}
+	}
+		
+@media screen and (max-width:320px){
+		.contact-backet p{ float:none; margin-bottom:5px}
+		.header-backet{ border:1px solid gray; padding:7px 25px; margin-left:0px;}
+		.menu{ float:none; display:inline-block;}
+		.menu li{ float:none; text-transform:uppercase; font-size:0.875em;}
+		
+		.my-slider ul li h2{top:10px; left:5px; font-size:20px; color:green;}
+		.my-slider ul li h3{ top:50px; left:5px; font-size:10px; color:red;}
+		.my-slider ul li p{ top:90px; left:15px; color:blue; font-weight:0; }
+	
+	.block_3-main{ margin-bottom:10px;}	
+	.block4-section>h2{ font-size:25px; margin-bottom:10px;}
+		
+	.block_3-main article img{ width:100%; margin-bottom:5px;}
+	.block_3-main article h2{ margin-bottom:5px;}
+	.block_3-main article p{ font-size:0.875em; margin-bottom:15px;}
+	
+	.block4-main article{ width:95%; margin:0 2.5% 10px 2.5%; float:left;}
+.block4-main article:first-child{ margin-left: 2.5%;}
+	.block4-main article img{ display:block; margin:0 auto 0px auto; width:100%}
+	
+	.about-content{ float:none; width:100%; margin-top:-60px; }
+	.about-content h2{margin-bottom:10px;}
+.about-content p{  margin-bottom:5px;}
+.map{ float:none; max-width:100%;}
+.map-in{ max-height:100%; overflow:hidden;}
+
+.email-inpt{ font-size:0.575em; width:100px; padding:7px 10px;}
+.submit-btn{ font-size:0.575em; padding:7px 10px;}
+.subscrebe{ padding:10px 0; margin-top:-40px;}
+.subscrebe h2{ font-size:15px;}
+.sub-form{ font-size:15px; }	
+		}	
+		/*24 урок*/
+		
+
